@@ -25,7 +25,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       filename: "index.html",
-      template: path.join(__dirname, "./dist/index.html"),
+      template: path.resolve(__dirname, "src/index.html"), // Utilise le fichier index.html dans le dossier src
       chunks: ["main"],
     }),
   ],
