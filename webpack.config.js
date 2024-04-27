@@ -29,9 +29,12 @@ module.exports = {
       chunks: ["main"],
     }),
   ],
-  stats: "minimal",
+  stats: {
+    children: true,
+  },
   devtool: "source-map",
   mode: "development",
+
   devServer: {
     open: false,
     static: path.resolve(__dirname, "./dist"),
